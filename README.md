@@ -33,7 +33,7 @@ Actiunile implementate:
 * Crearea fisierului CSV, Audit.csv, in care se va scrie de fiecare data cand o actiune va fi executa. Se va afisa numele actiunii, respectiv data si ora la care a fost executata actiunea.
 * Crearea celor 5 fisiere CSV (Autor, Bibliotecar, Carte, Cititor, Tehnoredactor) in care se poate scrie sau citi. Actiunile realizate in prima etapa au fost adaptate astfel incat sa permita prelucrarea datelor introduse in fisierele CSV.
 * Realizarea serviciului de audit, ServiciuAudit, ce retine numele actiunii + data si ora la care actiunea a fost executata.
-* Se pot citi un numar de autori, bibliotecari, carti, cititori sau tehnoredactori in fisierele CSV corespunzatoare.
+* Se poate citi un numar de autori, bibliotecari, carti, cititori sau tehnoredactori in fisierele CSV corespunzatoare.
 
 
 ### ETAPA 3:
