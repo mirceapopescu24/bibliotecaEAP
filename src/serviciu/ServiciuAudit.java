@@ -12,7 +12,7 @@ public class ServiciuAudit {
     public static void scrieAudit (String nume_actiune) throws IOException {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
         Date date = new Date(System.currentTimeMillis());
-        File file = new File("CSV/Audit.csv");
+        File file = new File("C:\\Users\\Ovidiu\\Desktop\\bibliotecaEAP\\src\\CSV\\Audit.csv");
         FileWriter fr = new FileWriter(file, true);
         BufferedWriter writer = new BufferedWriter(fr);
         writer.write(nume_actiune + ' ' +  formatter.format(date));
