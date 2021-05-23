@@ -20,8 +20,8 @@ public class UpdateBD {
         String query = "UPDATE bibliotecar SET salariu=" + salariu + " WHERE id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectBibliotecar();
+        con.close();
     }
 
     public static void UpdateSalariuT(double salariut, int id) throws SQLException {
@@ -29,8 +29,8 @@ public class UpdateBD {
         String query = "UPDATE tehnoredactor SET salariu=" + salariut + " WHERE id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectTehnoredactor();
+        con.close();
 
     }
 
@@ -39,8 +39,8 @@ public class UpdateBD {
         String query = "UPDATE autor SET carti_publicate=" + carti_publicate + " WHERE id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectAutor();
+        con.close();
 
     }
 
@@ -49,18 +49,19 @@ public class UpdateBD {
         String query = "UPDATE carte SET pret=" + pret + " WHERE id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectCarte();
+        con.close();
 
     }
 
     public static void UpdateCititor(String tip, int id) throws SQLException {
         Connection con = ConexiuneBD.getConnection();
-        String query = "UPDATE carte SET pret=" + tip + " WHERE id = " + id + "";
+        String query = "UPDATE cititor SET tip_abonament = ? WHERE id = ?";
         PreparedStatement preparedStatement = con.prepareStatement(query);
+        preparedStatement.setString(1, tip);
+        preparedStatement.setInt(2, id);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectCititor();
-
+        con.close();
     }
 }

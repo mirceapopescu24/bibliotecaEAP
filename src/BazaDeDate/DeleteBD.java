@@ -19,8 +19,8 @@ public class DeleteBD {
         String query = "DELETE FROM bibliotecar where id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectBibliotecar();
+        con.close();
     }
 
     public static void StergeTehnoredactor(int id) throws SQLException {
@@ -28,8 +28,8 @@ public class DeleteBD {
         String query = "DELETE FROM tehnoredactor where id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectTehnoredactor();
+        con.close();
     }
 
     public static void StergeAutor(int id) throws SQLException {
@@ -37,8 +37,8 @@ public class DeleteBD {
         String query = "DELETE FROM autor where id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectAutor();
+        con.close();
     }
 
     public static void StergeCarte(int id) throws SQLException {
@@ -46,8 +46,8 @@ public class DeleteBD {
         String query = "DELETE FROM carte where id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectAutor();
+        con.close();
     }
 
     public static void StergeCititor(int id) throws SQLException {
@@ -55,7 +55,7 @@ public class DeleteBD {
         String query = "DELETE FROM cititor where id = " + id + "";
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.executeUpdate();
-        con.close();
         SelectBD.SelectCititor();
+        con.close();
     }
 }

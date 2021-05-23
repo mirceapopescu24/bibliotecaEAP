@@ -355,7 +355,7 @@ public class Main {
                 int idupdate;
                 double salariuupdate;
                 Scanner sc6 = new Scanner(System.in);
-                System.out.println("Introduceti CNP-ul bibliotecarului pentru care doriti sa modificati salariul: ");
+                System.out.println("Introduceti id-ul bibliotecarului pentru care doriti sa modificati salariul: ");
                 idupdate = Integer.parseInt(sc6.nextLine());
                 System.out.println("Introduceti salariul modificat: ");
                 salariuupdate = Double.parseDouble(sc6.nextLine());
@@ -574,13 +574,13 @@ public class Main {
 
             case 33:
                 int id1;
-                String tipnou;
+                String tip_nou;
                 Scanner sc18 = new Scanner(System.in);
                 System.out.println("Introduceti ID-ul cititorului pentru care doriti sa modificati tipul abonamentului: ");
-                id = Integer.parseInt(sc18.nextLine());
+                id1 = Integer.parseInt(sc18.nextLine());
                 System.out.println("Introduceti noul tip al abonamentului: ");
-                tipnou = sc18.nextLine();
-                UpdateBD.UpdateCititor(tipnou, id);
+                tip_nou = sc18.nextLine();
+                UpdateBD.UpdateCititor(tip_nou, id1);
                 ServiciuAudit.scrieAudit("S-a actualizat abonamentul unui cititor din baza de date.");
                 break;
 

@@ -17,7 +17,7 @@ public class Cititor extends Persoana {
     }
 
     public int getId()
-    {return id;}
+    {return this.id;}
 
     public void setId(int id)
     {
