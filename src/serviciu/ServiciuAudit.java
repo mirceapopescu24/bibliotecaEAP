@@ -15,7 +15,7 @@ public class ServiciuAudit {
         File file = new File("C:\\Users\\Ovidiu\\Desktop\\bibliotecaEAP\\src\\CSV\\Audit.csv");
         FileWriter fr = new FileWriter(file, true);
         BufferedWriter writer = new BufferedWriter(fr);
-        writer.write(nume_actiune + ' ' +  formatter.format(date));
+        writer.write(nume_actiune + ',' +  formatter.format(date));
         writer.newLine();
         writer.close();
         fr.close();
