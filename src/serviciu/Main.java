@@ -6,6 +6,7 @@ import Clase.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -63,7 +64,11 @@ public class Main {
         System.out.println("Apasati tasta 39 pentru a adauga tehnoredactori in baza de date din fisierul Tehnoredactor.csv");
         System.out.println("Apasati tasta 40 pentru a adauga carti in baza de date din fisierul Carte.csv.");
         System.out.println("Apasati tasta 41 pentru a afisa un mesaj de multumire din partea bibliotecii pentru cititorii cu abonamente Elite din fisierul Cititor.csv.");
-
+        System.out.println("Apasati tasta 42 pentru a extrage un bibliotecar din baza de date folosind ID-ul.");
+        System.out.println("Apasati tasta 43 pentru a extrage un tehnoredactor din baza de date folosind ID-ul.");
+        System.out.println("Apasati tasta 44 pentru a extrage un autor din baza de date folosind ID-ul.");
+        System.out.println("Apasati tasta 45 pentru a extrage o carte din baza de date folosind ID-ul.");
+        System.out.println("Apasati tasta 46 pentru a extrage un autor din baza de date folosind ID-ul.");
 
         System.out.println("");
         Scanner in = new Scanner(System.in);
@@ -651,6 +656,50 @@ public class Main {
                 }
                 ServiciuAudit.scrieAudit("S-a afisat un mesaj de multumire din partea bibliotecii.");
                 break;
+
+            case 42:
+                int idbi;
+                Scanner sc22 = new Scanner(System.in);
+                System.out.println("Introduceti ID-ul bibliotecarului pe care doriti sa-l extrageti: ");
+                idbi = Integer.parseInt(sc22.nextLine());
+                SelectBD.SelectBibliotecarID(idbi);
+                ServiciuAudit.scrieAudit("S-a extras un bibliotecar din baza de date folosind ID-ul.");
+                break;
+
+            case 43:
+                int idte;
+                Scanner sc23 = new Scanner(System.in);
+                System.out.println("Introduceti ID-ul tehnoredactorului pe care doriti sa-l extrageti: ");
+                idte = Integer.parseInt(sc23.nextLine());
+                SelectBD.SelectTehnoredactorID(idte);
+                ServiciuAudit.scrieAudit("S-a extras un tehnoredactor din baza de date folosind ID-ul.");
+                break;
+
+            case 44:
+                int idau;
+                Scanner sc24 = new Scanner(System.in);
+                System.out.println("Introduceti ID-ul autorului pe care doriti sa-l extrageti: ");
+                idau = Integer.parseInt(sc24.nextLine());
+                SelectBD.SelectAutorID(idau);
+                ServiciuAudit.scrieAudit("S-a extras un autor din baza de date folosind ID-ul.");
+                break;
+
+            case 45:
+                int idcarte;
+                Scanner sc25 = new Scanner(System.in);
+                System.out.println("Introduceti ID-ul cartii pe care doriti sa o extrageti: ");
+                idcarte = Integer.parseInt(sc25.nextLine());
+                SelectBD.SelectCarteID(idcarte);
+                ServiciuAudit.scrieAudit("S-a extras o carte din baza de date folosind ID-ul.");
+                break;
+
+            case 46:
+                int idcititor;
+                Scanner sc26 = new Scanner(System.in);
+                System.out.println("Introduceti ID-ul cititorului pe care doriti sa-l extrageti: ");
+                idcititor = Integer.parseInt(sc26.nextLine());
+                SelectBD.SelectCititorID(idcititor);
+                ServiciuAudit.scrieAudit("S-a extras un cititor din baza de date folosind ID-ul.");
         }
     }
 }
